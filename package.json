@@ -3,7 +3,7 @@
     "private": true,
     "version": "1.0.0",
     "scripts": {
-      "start": "npm run start-backend & npm run start-frontend",
+      "start": "npm run build-frontend && npm run build-admin && npm run start-backend",
       "start-backend": "cd backend && npm run server",
       "start-frontend": "cd frontend && npm run dev",
       "start-admin": "cd admin && npm run dev",
@@ -18,8 +18,8 @@
       "preview-admin": "cd admin && npm run preview",
       "preview-frontend": "cd frontend && npm run preview",
       "rebuild": "cd backend && npm rebuild"
-
     },
     "dependencies": {},
     "devDependencies": {}
   }
+  
