@@ -16,7 +16,9 @@
       "lint-admin": "cd admin && npm run lint",
       "lint-frontend": "cd frontend && npm run lint",
       "preview-admin": "cd admin && npm run preview",
-      "preview-frontend": "cd frontend && npm run preview"
+      "preview-frontend": "cd frontend && npm run preview",
+      "rebuild": "cd backend && npm rebuild"
+
     },
     "dependencies": {},
     "devDependencies": {}
