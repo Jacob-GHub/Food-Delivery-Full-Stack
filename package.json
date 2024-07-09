@@ -1,0 +1,23 @@
+{
+    "name": "food-delivery",
+    "private": true,
+    "version": "1.0.0",
+    "scripts": {
+      "start": "npm run start-backend & npm run start-frontend",
+      "start-backend": "cd backend && npm run server",
+      "start-frontend": "cd frontend && npm run dev",
+      "start-admin": "cd admin && npm run dev",
+      "install-admin": "cd admin && npm install",
+      "install-frontend": "cd frontend && npm install",
+      "install-backend": "cd backend && npm install",
+      "install": "npm run install-admin && npm run install-frontend && npm run install-backend",
+      "build-admin": "cd admin && npm run build",
+      "build-frontend": "cd frontend && npm run build",
+      "lint-admin": "cd admin && npm run lint",
+      "lint-frontend": "cd frontend && npm run lint",
+      "preview-admin": "cd admin && npm run preview",
+      "preview-frontend": "cd frontend && npm run preview"
+    },
+    "dependencies": {},
+    "devDependencies": {}
+  }
