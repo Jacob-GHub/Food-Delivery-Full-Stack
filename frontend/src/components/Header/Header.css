@@ -26,7 +26,7 @@
     color:white;
     font-size: 1vw;
 }
-.header-contents button{
+.header-contents a{
     border: none;
     color:#747474;
     font-weight:500;
@@ -34,5 +34,27 @@
     background-color: white;
     font-size: max(1vw,13px);
     border-radius: 50px;
+    cursor: pointer;
+}
+.header-contents a:hover{
+    background-color: #e3e3e3;
+    color:tomato;
+}
 
+@media (max-width: 1050px){
+    .header-contents{
+        max-width: 45%;
+    }
+}
+
+@media (max-width: 750px){
+    .header-contents{
+        max-width: 65%;
+    }
+    .header-contents p{
+        display: none;
+    }
+    .header-contents button{
+        padding: 2vw 4vw;
+    }
 }
