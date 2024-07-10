@@ -15,7 +15,16 @@
   ### Track delivery status of past and current orders.
    <img width="1472" alt="tomato-order-tracking" src="https://github.com/Jacob-GHub/Food-Delivery-Full-Stack/assets/110055706/78fc1b7f-c93e-4245-911b-53698b8b7c4f">
    
-### Tomato uses an implemented admin dashboard to efficiently manage orders, update delivery statuses in real-time, and ensure smooth operational workflows.
+## Tomato uses an implemented admin dashboard to efficiently perform the following: 
+### Implement new food items
+ <img width="1472" alt="Screenshot 2024-07-09 at 6 00 38 PM" src="https://github.com/Jacob-GHub/Food-Delivery-Full-Stack/assets/110055706/b6739f58-a23a-4292-9b88-b22a021d9940">
+ 
+### Track all current store items
+<img width="1472" alt="Screenshot 2024-07-09 at 6 00 49 PM" src="https://github.com/Jacob-GHub/Food-Delivery-Full-Stack/assets/110055706/fc306b6e-4b73-4c89-984f-28c31baaf6e2">
+
+### Manage orders and update delivery statuses in real-time
+<img width="1472" alt="Screenshot 2024-07-09 at 6 01 14 PM" src="https://github.com/Jacob-GHub/Food-Delivery-Full-Stack/assets/110055706/0ec81816-4e77-41c3-a243-dbd30e315411">
+
 
   
 ## Tomato link on Render
