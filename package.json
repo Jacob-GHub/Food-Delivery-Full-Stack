@@ -1,25 +1,26 @@
 {
-    "name": "food-delivery",
-    "private": true,
-    "version": "1.0.0",
-    "scripts": {
-      "start": "npm run build-frontend && npm run build-admin && npm run start-backend",
-      "start-backend": "cd backend && npm run server",
-      "start-frontend": "cd frontend && npm run dev",
-      "start-admin": "cd admin && npm run dev",
-      "install-admin": "cd admin && npm install",
-      "install-frontend": "cd frontend && npm install",
-      "install-backend": "cd backend && npm install",
-      "install": "npm run install-admin && npm run install-frontend && npm run install-backend",
-      "build-admin": "cd admin && npm run build",
-      "build-frontend": "cd frontend && npm run build",
-      "lint-admin": "cd admin && npm run lint",
-      "lint-frontend": "cd frontend && npm run lint",
-      "preview-admin": "cd admin && npm run preview",
-      "preview-frontend": "cd frontend && npm run preview",
-      "rebuild": "cd backend && npm rebuild"
-    },
-    "dependencies": {},
-    "devDependencies": {}
-  }
-  
+  "name": "food-delivery",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "start": "npm run build-all && npm run start-backend",
+    "start-backend": "cd backend && npm run server",
+    "build-all": "npm run build-frontend && npm run build-admin",
+    "build-frontend": "cd frontend && npm run build",
+    "build-admin": "cd admin && npm run build",
+    "install": "npm install --legacy-peer-deps && npm run install-all",
+    "install-all": "npm run install-frontend && npm run install-admin && npm run install-backend",
+    "install-frontend": "cd frontend && npm install --legacy-peer-deps",
+    "install-admin": "cd admin && npm install --legacy-peer-deps",
+    "install-backend": "cd backend && npm install --legacy-peer-deps",
+    "lint-all": "npm run lint-frontend && npm run lint-admin",
+    "lint-frontend": "cd frontend && npm run lint",
+    "lint-admin": "cd admin && npm run lint",
+    "preview-all": "npm run preview-frontend && npm run preview-admin",
+    "preview-frontend": "cd frontend && npm run preview",
+    "preview-admin": "cd admin && npm run preview",
+    "rebuild": "cd backend && npm rebuild"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}
