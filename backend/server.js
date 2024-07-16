@@ -11,7 +11,8 @@ import path from "path";
 // app config
 const app = express();
 const port = process.env.PORT || 4000;
-const cors = require('cors');
+const _dirname = path.resolve();
+app.use(express.static(path.join(_dirname, '../frontend/dist')));
 
 // middleware
 app.use(express.json());
