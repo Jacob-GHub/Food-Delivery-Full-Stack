@@ -6,13 +6,14 @@ import userRouter from "./routes/userRoute.js";
 import 'dotenv/config.js';
 import cartRouter from "./routes/cartRoute.js";
 import orderRouter from "./routes/orderRoute.js";
+import { fileURLToPath } from 'url';
 import path from "path";
 
 // app config
 const app = express();
-const port = process.env.PORT || 4000;
-const _dirname = path.resolve();
-app.use(express.static(path.join(_dirname, '../frontend/dist')));
+const PORT = process.env.PORT || 4000;
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 // middleware
 app.use(express.json());
@@ -29,7 +30,6 @@ app.use("/api/cart", cartRouter);
 app.use("/api/order", orderRouter);
 
 // Serve static files from the frontend build directory
-const __dirname = path.resolve();
 app.use(express.static(path.join(__dirname, '../frontend/dist')));
 
 app.get("/", (req, res) => {
@@ -41,6 +41,6 @@ app.get('*', (req, res) => {
     res.sendFile(path.resolve(__dirname, '../frontend/dist', 'index.html'));
 });
 
-app.listen(port, () => {
+app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });
