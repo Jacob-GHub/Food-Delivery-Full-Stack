@@ -18,7 +18,7 @@ const __dirname = path.dirname(__filename);
 // middleware
 app.use(express.json());
 app.use(cors({
-    origin: 'https://myfrontend.netlify.app', // Replace with your Netlify URL
+    origin: 'https://66eb264eaa352b85bbb64081--animated-sunburst-fc1d54.netlify.app', // Replace with your Netlify URL
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     credentials: true
 }));
