@@ -17,7 +17,11 @@ const __dirname = path.dirname(__filename);
 
 // middleware
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+    origin: 'https://myfrontend.netlify.app', // Replace with your Netlify URL
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    credentials: true
+}));
 
 // db connection
 connectDB();
