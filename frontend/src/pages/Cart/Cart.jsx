@@ -2,8 +2,7 @@ import React, { useContext } from 'react'
 import './Cart.css'
 import { StoreContext } from '../../context/StoreContext'
 import { useNavigate } from 'react-router-dom'
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { toast } from 'react-toastify'
 
 const Cart = () => {
 
@@ -23,7 +22,6 @@ const Cart = () => {
 
   return (
     <div className= 'cart'>
-      <ToastContainer />
       <div className="cart-items">
         <div className="cart-items-title">
           <p>Items</p>
