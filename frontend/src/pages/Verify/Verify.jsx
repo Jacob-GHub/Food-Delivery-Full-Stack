@@ -10,21 +10,35 @@ const Verify = () => {
     const orderId = searchParams.get("orderId")
     const {url} = useContext(StoreContext);
     const navigate = useNavigate();
+    const [loading, setLoading] = useState(true);
+
     const verifyPayment = async () => {
-        const response = await axios.post(url+"/api/order/verify",{success,orderId},{withCredentials:true});
-        if (response.data.success){
-            navigate("/myorders");
-        }else{
-            navigate("/")
+        try {
+            const response = await axios.post(`${url}/api/order/verify`, { success, orderId }, { withCredentials: true });
+            if (response.data.success) {
+                navigate("/myorders");
+            } else {
+                navigate("/");
+            }
+        } catch (error) {
+            console.error("Payment verification failed:", error);
+            navigate("/");
+        } finally {
+            setLoading(false);
         }
-    }
-    useEffect(()=>{
+    };
+  useEffect(() => {
+    if (success && orderId) {
         verifyPayment();
-    },[])
+    } else {
+        // Handle missing params (optional)
+        navigate("/");
+    }
+}, [success, orderId]);
 
   return (
     <div className='verify'>
-      <div className="spinner"></div>
+      {loading ? <div className="spinner"></div> : <div>Redirecting...</div>}
     </div>
   )
 }
