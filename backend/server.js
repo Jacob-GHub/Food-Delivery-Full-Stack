@@ -18,7 +18,7 @@ const __dirname = path.dirname(__filename);
 // middleware
 app.use(express.json());
 app.use(cors({
-    origin: 'https://animated-sunburst-fc1d54.netlify.app/', // Replace with your Netlify URL
+    origin: 'https://animated-sunburst-fc1d54.netlify.app', // Replace with your Netlify URL
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     credentials: true
 }));
