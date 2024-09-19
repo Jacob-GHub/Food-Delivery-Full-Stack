@@ -9,7 +9,7 @@ const Cart = () => {
   const {cartItems,food_list,removeFromCart, getTotalCartAmount, url} = useContext(StoreContext)
   const navigate = useNavigate();
 
-  toast.configure();
+  // toast.configure();
 
   const handleCheckout = () => {
     if (!localStorage.getItem("token")) {
