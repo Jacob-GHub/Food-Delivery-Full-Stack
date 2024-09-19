@@ -7,7 +7,7 @@ export const StoreContext = createContext(null)
 const StoreContextProvider = (props) => {
     const [food_list,setFoodList] = useState([])
     const [cartItems,setCartItems] = useState({});
-    const url = "http://localhost:4000"
+    const url = "https://66eb280583a29987c72509bf--animated-sunburst-fc1d54.netlify.app"
     const [token,setToken] = useState("")
 
     //add to cart
