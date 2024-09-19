@@ -8,7 +8,7 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY)
 //placing user order from frontend
 const PlaceOrder = async (req,res) =>{
     
-    const frontend_url="https://animated-sunburst-fc1d54.netlify.app"
+    const frontend_url="https://food-delivery-jp.netlify.app"
 
     try {
         const newOrder = new orderModel({
