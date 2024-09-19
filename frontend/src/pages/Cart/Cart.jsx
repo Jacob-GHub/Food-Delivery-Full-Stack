@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 import './Cart.css'
 import { StoreContext } from '../../context/StoreContext'
 import { useNavigate } from 'react-router-dom'
-import { toast } from 'react-toastify';
+import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const Cart = () => {
@@ -13,18 +13,17 @@ const Cart = () => {
   toast.configure();
 
   const handleCheckout = () => {
-    if (!token) {
-      // Notify user to sign in
-      toast.error("Please sign in to proceed to checkout", {
-        position: toast.POSITION.TOP_CENTER
-      });
-    } else {
-      navigate('/order');
+    if (!localStorage.getItem("token")) {
+      toast.error("Please sign in to proceed to checkout");
+      return;
     }
-  }
+    navigate('/order');
+  };
+
 
   return (
     <div className= 'cart'>
+      <ToastContainer />
       <div className="cart-items">
         <div className="cart-items-title">
           <p>Items</p>

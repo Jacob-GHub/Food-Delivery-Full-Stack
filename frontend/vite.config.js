@@ -7,7 +7,4 @@ export default defineConfig({
   build: {
     outDir: 'dist',
   },
-  alias: {
-    'react-toastify': 'react-toastify/dist/react-toastify.esm.js'
-  }
 })
