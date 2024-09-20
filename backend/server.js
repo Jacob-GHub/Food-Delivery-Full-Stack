@@ -39,7 +39,10 @@ app.use(express.static(path.join(__dirname, '../frontend/dist')));
 app.get("/", (req, res) => {
     res.send("API Working");
 });
-
+app.get('/keep-alive', (req, res) => {
+    res.status(200).send('Backend is alive');
+  });
+  
 // Handle any other requests by serving the frontend's index.html
 app.get('*', (req, res) => {
     res.sendFile(path.resolve(__dirname, '../frontend/dist', 'index.html'));
