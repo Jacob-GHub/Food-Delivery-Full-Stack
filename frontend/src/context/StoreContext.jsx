@@ -7,6 +7,7 @@ export const StoreContext = createContext(null)
 const StoreContextProvider = (props) => {
     const [food_list,setFoodList] = useState([])
     const [cartItems,setCartItems] = useState({});
+    const [loading, setLoading] = useState(false); // Add loading state
     const url = "https://food-del-s2l8.onrender.com"
     const [token,setToken] = useState("")
 
@@ -42,11 +43,14 @@ const StoreContextProvider = (props) => {
     }
 
     const fetchFoodList = async () => {
+        setLoading(true); // Start loading
         try {
             const response = await axios.get(url + "/api/food/list", { withCredentials: true });
             setFoodList(response.data.data);
         } catch (error) {
             console.error("Failed to fetch food list:", error);
+        } finally {
+            setLoading(false); // End loading
         }
     }
     const loadCartData = async (token) =>{
@@ -70,6 +74,7 @@ const StoreContextProvider = (props) => {
         addToCart,
         removeFromCart,
         getTotalCartAmount,
+        loading,
         url,
         token,
         setToken

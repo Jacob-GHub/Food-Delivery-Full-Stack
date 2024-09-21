@@ -13,3 +13,8 @@
     gap:30px;
     row-gap: 50px;
 }
+.loader {
+    text-align: center;
+    font-size: 20px;
+    margin-top: 20px;
+}
