@@ -12,7 +12,7 @@ const FoodDisplay = ({category}) => {
         <h2>Top dishes near you</h2>
         <div className="food-display-list">
           {loading ? (
-                      <div className="loader">Loading...</div> // Display loader when fetching data
+                      <div className="loader">Loading... Please select a food option to fetch backend</div> // Display loader when fetching data
                   ) : (
             food_list.map((item,index)=>{
               if (category==="All" || category===item.category){
