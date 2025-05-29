@@ -26,11 +26,6 @@
 <img width="1472" alt="Screenshot 2024-07-09 at 6 01 14 PM" src="https://github.com/Jacob-GHub/Food-Delivery-Full-Stack/assets/110055706/0ec81816-4e77-41c3-a243-dbd30e315411">
 
 
-  
-## Tomato link on Render
-* Tomato was deployed using Render, ensuring high availability and scalability, allowing seamless user access and sharing of the platform.
-[https://food-delivery-full-stack.onrender.com](https://food-delivery-full-stack.onrender.com)
-
 ## Built With
 
 * [MongoDB](https://www.mongodb.com) - The database platform used
@@ -45,6 +40,3 @@
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
-This project was guided by GreatStack Tutorial
